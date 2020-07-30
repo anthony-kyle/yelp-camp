@@ -31,7 +31,7 @@ app.get('/campgrounds', (req,res) => {
     {name: 'Granite Hill', image: 'https://images.unsplash.com/photo-1545252682-2d32e48111da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80'},
     {name: 'Mountain Goat\'s Rest', image: 'https://images.unsplash.com/photo-1590122401860-bfebd9aae845?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'}
   ];
-  res.render('campgrounds');
+  res.render('campgrounds', {campgrounds: campgrounds});
 });
 
 //*************************************** */
