@@ -12,12 +12,16 @@
 const express = require('express');
 const app     = express();
 
-
-
+//*************************************** */
+// Routes                                 */
+//*************************************** */
+app.get('/', (req,res) => {
+  res.send('Yelp Camp Coming Soon....')
+});
 
 //*************************************** */
 // Initialise Server                      */
 //*************************************** */
 app.listen(3000, function(){
   console.log('Yelp Camp running on port 3000');
-})
+});
