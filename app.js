@@ -18,6 +18,7 @@ app.set('view engine', 'ejs');
 // Routes                                 */
 //*************************************** */
 // app.get('/', (req,res) => {});
+// app.post('/', (req,res) => {});
 
 // Landing Page
 app.get('/', (req,res) => {
@@ -33,6 +34,8 @@ app.get('/campgrounds', (req,res) => {
   ];
   res.render('campgrounds', {campgrounds: campgrounds});
 });
+
+app.post('/campgrounds', (req,res) => {});
 
 //*************************************** */
 // Initialise Server                      */
