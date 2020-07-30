@@ -12,11 +12,13 @@
 const express = require('express');
 const app     = express();
 
+app.set('view engine', 'ejs');
+
 //*************************************** */
 // Routes                                 */
 //*************************************** */
 app.get('/', (req,res) => {
-  res.send('Yelp Camp Coming Soon....')
+  res.render('landing');
 });
 
 //*************************************** */
