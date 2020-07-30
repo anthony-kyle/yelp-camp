@@ -37,6 +37,10 @@ app.get('/campgrounds', (req,res) => {
   res.render('campgrounds', {campgrounds: campgrounds});
 });
 
+app.get('/campgrounds/new', (req,res) => {
+  res.render('new');
+});
+
 app.post('/campgrounds', (req,res) => {
   // Get data and add to DB
 
