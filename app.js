@@ -11,7 +11,9 @@
 //*************************************** */
 const express = require('express');
 const app     = express();
+const bp      = require('body-parser');
 
+app.use(bp.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 //*************************************** */
@@ -35,7 +37,11 @@ app.get('/campgrounds', (req,res) => {
   res.render('campgrounds', {campgrounds: campgrounds});
 });
 
-app.post('/campgrounds', (req,res) => {});
+app.post('/campgrounds', (req,res) => {
+  // Get data and add to DB
+
+  // Return to /campgrounds
+});
 
 //*************************************** */
 // Initialise Server                      */
