@@ -1,3 +1,5 @@
+<%- include('includes/head'); %>
+
 <h1>Campgrounds</h1>
 <% campgrounds.forEach(camp => { %>
   <div>
@@ -5,3 +7,5 @@
     <img src="<%=camp.image %>" alt="<%=camp.name %>">
   </div>
 <% }); %>
+
+<%- include('includes/foot'); %>
