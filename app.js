@@ -12,13 +12,38 @@
 const express = require('express');
 const app     = express();
 const bp      = require('body-parser');
+app.use(bp.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
+
+//*************************************** */
+// Initialise Database                    */
+//*************************************** */
 const mongoose= require("mongoose");
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb://localhost/dogs", {useNewUrlParser: true});
 
-app.use(bp.urlencoded({extended: true}));
-app.set('view engine', 'ejs');
+// const catSchema = new mongoose.Schema({
+//   name: String,
+//   age: Number, 
+//   temperament: String
+// });
 
+// const Cat = mongoose.model("Cat", catSchema);
+
+// let George = new Cat({
+//   name: "George",
+//   age: 11,
+//   temperament: "Grouchy"
+// })
+
+// George.save(function(err, cat){
+//   if(err){
+//     console.log("Something Went Wrong!");
+//   } else {
+//     console.log("We just saved a cat to the DB:");
+//     console.log(cat);
+//   }
+// })
 // Temp placeholder before adding DB
 let campgrounds = [
   {name: 'Salmon Creek', image: 'https://images.unsplash.com/photo-1500332988905-1bf2a5733f63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'},
