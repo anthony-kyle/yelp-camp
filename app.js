@@ -12,6 +12,9 @@
 const express = require('express');
 const app     = express();
 const bp      = require('body-parser');
+const mongoose= require("mongoose");
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect("mongodb://localhost/dogs", {useNewUrlParser: true});
 
 app.use(bp.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
