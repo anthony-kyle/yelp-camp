@@ -1,13 +1,25 @@
 <%- include('includes/head'); %>
 
-<h1>Create a New Campground</h1>
+<div class="container">
+  <h1 style="text-align: center;">Create a New Campground</h1>
 
-<form action="/campgrounds" method="post">
-  <input type="text" name="name" placeholder="Campground Name">
-  <input type="text" name="image" placeholder="Image URL">
-  <button>Submit</button>
-</form>
+  <form action="/campgrounds" method="post" id="newCamp" style="width: 30%; margin: 0 auto;" class="my-5">
+    <div class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="Campground Name">
+    </div>
 
-<a href="/campgrounds">&lt;&lt; Back</a>
+    <div class="form-group">
+      <input class="form-control" type="text" name="image" placeholder="Image URL">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-lg btn-primary btn-block">Submit</button>
+    </div>
+
+    <a href="/campgrounds">Go Back</a>
+  </form>
+
+  
+</div>
 
 <%- include('includes/foot'); %>

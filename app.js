@@ -61,6 +61,11 @@ app.post('/campgrounds', (req,res) => {
   res.redirect("/campgrounds");
 });
 
+// // CSS
+// app.get('/css', (req, res) => {
+//   res.send(/assets/css/style.css);
+// });
+
 //*************************************** */
 // Initialise Server                      */
 //*************************************** */
